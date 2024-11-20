@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCrafter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #D2D2D2;
+            background-image:
+            repeating-linear-gradient(
+                to right, transparent 0 100px,
+                #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                to bottom, transparent 0 100px,
+                #25283b22 100px 101px
+            );
+        }
+        body::before {
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(./Creative1/bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        }
+        .slider .item img {
+            opacity: 0.7; 
+            transition: opacity 0.3s ease; 
+        }
+        .slider .item img:hover {
+            opacity: 1; 
+        }
+        nav {
+            background: #25283b;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <img src="./logo_final.png" alt="CodeCrafter Logo"  class="navbar-logo"> </div>
+        <input type="checkbox" title="menu-toggle" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="nav-menu">
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="./all_lessons.html">Lessons</a></li>
+            <li>
+                <a href="#">Resources</a>
+                <ul class="dropdown">
+                    <li><a href="./resources.html" rel="noopener" >HTML</a></li>
+                    <li><a href="./resources.html"  rel="noopener" >CSS</a></li>
+                </ul>
+            </li>
+            <li><a href="./aboutus1.html">About</a></li>
+            <li><a href="./contacts.html">Contact</a></li>
+            <li><a href="./form.html" class="login-button">Login</a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="banner">
+      <div class="slider" style="--quantity: 10">
+          <div class="item"  style="--position: 1"><img src="./css (2).png" alt=""></div>
+            <div class="item" style="--position: 2"><img src="./html-5 (1).png" alt=""></div>
+            <div class="item" style="--position: 3"><img src="./css (1).png" alt=""></div>
+            <div class="item" style="--position: 4"><img src="./html-file.png" alt=""></div>
+            <div class="item" style="--position: 5"><img src="./css (3).png" alt=""></div>
+            <div class="item" style="--position: 6"><img src="./html.png" alt=""></div>
+            <div class="item" style="--position: 7"><img src="./css-3 (1).png" alt=""></div>
+            <div class="item" style="--position: 8"><img src="./html-code.png" alt=""></div>
+            <div class="item" style="--position: 9"><img src="./css.png" alt=""></div>
+            <div class="item" style="--position: 10"><img src="./html (1).png" alt=""></div>
+        </div>
+
+
+        <div class="content">
+            <h1 data-content="HTML & CSS">HTML & CSS</h1>
+            <div class="author"> 
+                <h2>CodeCrafter</h2>
+             
+                <p>You too can build this website by following the lessons !</p>
+            </div>
+            <div class="model"></div>
+        </div>
+    </div>
+
+
+<div class="spacer"></div>
+
+
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-left">
+            <h2 class="footer-logo">
+              <img src="./logo_final.png" alt="CodeCrafter Logo" class="footer-logo-img">  </h2>
+              
+          </div>
+          <div class="footer-links">
+              <h3>Quick Links </h3>
+              <ul class="footer-links-list">
+                  <li  class="footer-links-item"><a href="./all_lessons.html" class="footer-links-item-link"   >All Lessons</a></li>
+                  <li  class="footer-links-item"><a href="./resources.html" class="footer-links-item-link">Resources</a></li>
+                  <li  class="footer-links-item"><a href="./aboutus1.html" class="footer-links-item-link">About Us</a></li>
+                  <li  class="footer-links-item"><a href="./contacts.html" class="footer-links-item-link">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-socials">
+            <h3>Connect With Me</h3>
+            <ul>
+                <li><a href="https://x.com/rajdeeptwts" target="_blank" rel="noopener" aria-label="Twitter"><img src="./twitter.png" height="30px" width="30px" alt="Twitter Icon"></a></li>
+                <li><a href="https://github.com/RajdeepKushwaha5" target="_blank" rel="noopener" aria-label="GitHub"><img src="./github-logo.png" height="30px" width="30px" alt="GitHub Icon"></a></li>
+                <li><a href="https://www.linkedin.com/in/rajdeep-kushwaha-000000000000000000/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="./linkedin.png" height="30px" width="30px" alt="LinkedIn Icon"></a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+          <p>© 2024 CodeCrafter . All rights reserved.</p>
+      </div>
+  </footer>
+
+
+</body>
+</html>
