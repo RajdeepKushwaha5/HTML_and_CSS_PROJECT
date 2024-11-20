@@ -1,0 +1,86 @@
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  background-image: url(./hiran.jpg);
+  font-weight: 400;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+
+
+h2, h3 {
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 700; 
+}
+
+.mentors-section {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.mentor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+}
+
+.mentor-card {
+  background: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px; 
+}
+
+
+.mentor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mentor-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
+
+h3 {
+  margin: 10px 0;
+  color: #007BFF;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+  color: #555;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.mentor-card {
+  animation: fadeIn 0.5s ease forwards;
+}

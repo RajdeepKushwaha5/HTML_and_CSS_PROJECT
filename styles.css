@@ -1,0 +1,397 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+.banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    background-image: url(./Creative1/model.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    .banner .content .author{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner .slider{
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
+    }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(180px);
+    }
+    .banner .content h1{
+        font-size: 5em;
+    }
+}
+
+
+
+
+
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+.navbar {
+  background-color: transparent; 
+  color: black; 
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Ica Rubrik Black', sans-serif; 
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif; 
+}
+
+.nav-menu a:hover {
+  color: #ffcc00; 
+  text-decoration: underline;
+}
+
+.nav-menu .active {
+  border-bottom: 2px solid #ffcc00; 
+}
+
+/* Dropdown Menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #808080; 
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu li:hover .dropdown {
+  display: block; 
+}
+
+.dropdown li {
+  white-space: nowrap;
+}
+
+.dropdown a {
+  padding: 10px 20px;
+}
+
+.menu-toggle {
+  display: none; 
+}
+
+.hamburger {
+  display: none; 
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none; 
+      flex-direction: column;
+      position: absolute;
+      top: 60px; 
+      right: 0;
+      background: #808080; 
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu li {
+      width: 100%;
+      text-align: center;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(2) {
+      opacity: 0; 
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .menu-toggle:checked ~ .nav-menu {
+      display: flex; 
+  }
+
+  .hamburger {
+      display: flex; 
+  }
+}
+
+
+@media (min-width: 769px) {
+  .menu-toggle {
+      display: none;
+  }
+
+  .hamburger {
+      display: none; 
+  }
+}
+
+
+
+
+
+
+.navbar a, .footer a {
+  color: black; 
+}
+
+.footer {
+  background-color: transparent; 
+  color: black; 
+}
+
+.footer-container {
+  display: flex; 
+  justify-content: space-between;  
+  max-width: 1200px; 
+}
+
+
+.footer-left {
+  flex: 1; 
+}
+
+.footer-logo {
+  font-size: 24px; 
+  font-weight: bold; 
+  font-family: 'Ica Rubrik Black', sans-serif;
+  margin-bottom: 10px; 
+}
+
+.footer-links,
+.footer-socials {
+  flex: 1; 
+}
+
+
+
+.footer-links-list .footer-links-item-link {
+  color: #000 !important;
+}
+
+.footer-links-list {
+  color: #000 !important; 
+}
+
+
+
+.footer-links h3,
+.footer-socials h3 {
+  margin-bottom: 10px; 
+  font-family: 'Poppins', sans-serif; 
+
+}
+
+.footer-links ul,
+.footer-socials ul {
+  list-style: none; 
+  padding: 0; 
+  
+}
+
+
+
+
+
+.footer-links li,
+.footer-socials li {
+  margin: 5px 0; 
+}
+
+.footer-links a,
+.footer-socials a {
+  color: white; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+  font-family: 'Poppins', sans-serif; 
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+  color: #ffcc00; 
+}
+
+.footer-bottom {
+  text-align: center; 
+  margin-top: 20px;   border-top: 1px solid rgba(255, 255, 255, 0.3); 
+  padding-top: 10px; 
+  font-family: 'Poppins', sans-serif; 
+}
+
+
+
+.navbar-logo {
+  width: 100px; 
+  height: 100px; 
+}
+
+.footer-logo-img {
+  width: 100px; 
+  height: 100px; 
+}
+
+.spacer {
+  height: 100px; 
+}

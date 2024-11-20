@@ -1,0 +1,393 @@
+
+
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hero-title {
+  color: #000 ;
+}
+
+.hero-subtitle {
+  color: #000;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('./flat-design-forest-landscape_23-2149155031.avif') no-repeat center center fixed; 
+    background-size: cover;
+    color: black; 
+    /* opacity: 0.7; */
+}
+
+
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7); 
+    color: black;
+    position: fixed; 
+    width: 100%;
+    z-index: 1000; 
+    transition: background-color 0.3s; 
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Ica Rubrik Black', sans-serif;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    color: black; 
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 18px; 
+}
+
+.nav-menu a:hover {
+    color: #ffcc00; 
+}
+
+
+
+.hero {
+    text-align: center;
+    padding: 150px 20px; 
+  
+    background-size: cover;
+    position: relative;
+    min-height: 400px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: 'Ica Rubrik Black', sans-serif;
+    font-size: 4em;
+    transform: perspective(1000px) translateZ(50px);
+    transition: transform 0.3s;
+    z-index: 1; 
+}
+
+
+.html-resources-list, .css-resources-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1:hover {
+    transform: perspective(1000px) translateZ(100px);
+}
+
+.hero p {
+    z-index: 1; 
+    font-size: 1.5em; 
+    margin-top: 10px;
+}
+
+
+
+section {
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    margin: 20px 0; 
+    border-radius: 10px; 
+    animation: fadeIn 1s ease-in-out; 
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+section ul {
+    list-style: none;
+    padding: 0; 
+}
+
+section ul li {
+    margin: 10px 0;
+}
+
+section ul a {
+    color: #ffcc00; 
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.2em; 
+}
+
+section ul a:hover {
+    color: black; 
+}
+
+/* Video Container */
+.video-container {
+    margin-top: 20px;
+    text-align: center; 
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px; 
+    height: 315px; 
+    border: none; 
+    border-radius: 10px; 
+    transition: transform 0.3s; 
+}
+
+.video-container iframe:hover {
+    transform: scale(1.05); 
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    color: black; 
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate {
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em; 
+    }
+
+    .navbar-container {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .nav-menu {
+        flex-direction: column; 
+        margin-top: 10px; 
+    }
+
+    .nav-menu li {
+        margin-left: 0; 
+        margin-bottom: 10px; 
+    }
+}
+
+
+
+.logo-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+    @keyframes moveText {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    .moving-text {
+        display: inline-block;
+        animation: moveText 10s linear infinite;
+    }
+
+ 
+        .crazy-text {
+            animation: colorChange 5s linear infinite;
+        }
+ 
+    
+  
+
+
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mission, .community {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s, background-color 0.3s;
+  opacity: 0.9;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  background-color: #d0d0d0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h3, h4 {
+  margin-top: 0;
+}
+
+
+
+body {
+    background-color: #f0f0f0; 
+    position: relative; 
+}
+
+.floating-tag {
+    position: absolute;
+    font-size: 5rem; 
+    opacity: 0.1;
+    pointer-events: none; 
+}
+
+
+.tag-html { top: 10%; left: 10%; }
+.tag-p { top: 20%; right: 15%; }
+.tag-abbr { top: 30%; left: 25%; }
+.tag-head { top: 40%; right: 20%; }
+.tag-body { top: 50%; left: 30%; }
+.tag-hr { top: 60%; right: 25%; }
+.tag-br { top: 70%; left: 35%; }
+.tag-title { top: 80%; right: 30%; }
+.tag-q { top: 90%; left: 40%; }
+.tag-section { top: 5%; right: 5%; }
+.tag-iframe { top: 15%; left: 5%; }
+.tag-legend { top: 25%; right: 5%; }
+
+
+
+
+
+
+
+.quiz-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.question {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    padding: 15px; 
+    background-color: #fff; 
+}
+
+
+.question {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.question:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+
+.options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options li {
+    margin: 10px 0;
+}
+
+.options input {
+    margin-right: 10px; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
